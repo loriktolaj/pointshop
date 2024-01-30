@@ -81,7 +81,7 @@ const ProductScreen = () => {
                         <ListGroup.Item>
                             <Row>
                                 <Col>
-                                    Qty
+                                    Quantity
                                 </Col>
                                 <Col>
                                     <Form.Control as='select' value={qty} onChange={(e) => setQty(Number(e.target.value))}>

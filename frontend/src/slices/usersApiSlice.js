@@ -22,7 +22,7 @@ export const usersApiSlice = apiSlice.injectEndpoints({
                 url: `${USERS_URL}/logout`,
                 method: 'POST',
             }),
-        })
+        }),
     }),
 });
 
