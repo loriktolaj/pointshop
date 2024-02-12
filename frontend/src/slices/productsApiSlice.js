@@ -25,6 +25,7 @@ export const productsApiSlice = apiSlice.injectEndpoints({
                 url: PRODUCTS_URL,
                 method: 'POST',
             }),
+            // this variable it will stop from being cached so that to have fresh data.
             invalidatesTags: ['Product'],
         }),
         updateProduct: builder.mutation({

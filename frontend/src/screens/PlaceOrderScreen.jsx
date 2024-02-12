@@ -26,6 +26,7 @@ const PlaceOrderScreen = () => {
         }
     }, [cart.paymentMethod, cart.shippingAddress.address, navigate]);
 
+    //  call createOrder in ordersApiSlice which makes the POST request, sends data and gets the order created.
     const placeOrderHandler = async () => {
         try {
             const res = await createOrder({

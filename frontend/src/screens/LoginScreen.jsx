@@ -19,12 +19,16 @@ const LoginScreen = () => {
 
     const [login, { isLoading}] = useLoginMutation();
 
+    // takes in a function, passes in a state and we want the auth part of the state
     const { userInfo } = useSelector((state) => state.auth);
 
+    // get the url and check if there is 'redirect' in it
     const { search } = useLocation();
     const sp = new URLSearchParams(search);
     const redirect = sp.get('redirect') || '/';
 
+
+    // check if we're logged in
     useEffect(() => {
         if(userInfo){
             navigate(redirect);

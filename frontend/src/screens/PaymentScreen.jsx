@@ -16,6 +16,7 @@ const PaymentScreen = () => {
     const cart = useSelector((state) => state.cart);
     const {shippingAddress} = cart;
 
+    // use the [] as dependencies because the useEffect is depended on them
     useEffect(() => {
         if (!shippingAddress){
             navigate('/shipping');

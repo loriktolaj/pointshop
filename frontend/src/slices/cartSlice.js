@@ -30,6 +30,7 @@ const cartSlice = createSlice ({
             state.shippingAddress = action.payload;
             return updateCart(state);
         },
+        //set the paymentMethod to the payload that is passed in to that action (savePaymentMethod)
         savePaymentMethod: (state, action) => {
             state.paymentMethod = action.payload;
             return updateCart(state);

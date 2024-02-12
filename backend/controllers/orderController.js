@@ -4,6 +4,7 @@ import Order from '../models/orderModel.js'
 // @desc    Create new order
 // @route   POST /api/orders
 // @access  Private
+//  get the stuff from the body of the HTTP request
 const addOrderItems = asyncHandler(async (req, res) => {
     const {
         orderItems,

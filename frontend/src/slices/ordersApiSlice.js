@@ -1,6 +1,8 @@
 import { apiSlice } from './apiSlice'
 import { ORDERS_URL, PAYPAL_URL } from '../constants'
 
+
+// inject endpoints into api slice (endpoints: builder) which is connected to the store
 export const ordersApiSlice = apiSlice.injectEndpoints({
     endpoints: (builder) => ({
         createOrder: builder.mutation({

@@ -3,6 +3,7 @@ import {apiSlice} from './apiSlice'
 
 export const usersApiSlice = apiSlice.injectEndpoints({
     endpoints: (builder) => ({
+        // send the request to backend and set the cookie and once we get the data back, from the authslice we call setCredentials
         login: builder.mutation({
             query: (data) => ({
                 url: `${USERS_URL}/auth`,
@@ -17,6 +18,7 @@ export const usersApiSlice = apiSlice.injectEndpoints({
                 body: data,
             }),
         }),
+        // logout endpoint to hit the USERS_URL, thats how we destroy the cookie on the server
         logout: builder.mutation({
             query: () => ({
                 url: `${USERS_URL}/logout`,
